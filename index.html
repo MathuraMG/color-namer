@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ColorScale</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script src="values.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <!-- <div class="container"></div> -->
+    <input type="text" name="color" class="input-color"></input>
+    <button class="input-submit" onclick="calculateColor()">Submit</button>
+    <div class="input-color-box color-box"></div>
+    <p class="input-color-name">NaN</p>
+    <div class="container-hsb">
+      <div class="container-hsb-part container-hsb-1"></div>
+      <div class="container-hsb-part container-hsb-2"></div>
+      <div class="container-hsb-part container-hsb-3"></div>
+    </div>
+  </body>
+</html>
