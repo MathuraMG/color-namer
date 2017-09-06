@@ -14,19 +14,28 @@ function calculateColor() {
     var b = parseInt(color[4]+color[5],16);
     var hsb = rgbToHsv(r,g,b);
     console.log(hsb);
-    hsb[0] = Math.round(hsb[0]*100);
-    hue = hsb[0].toString().split('');
-    hue[1]=parseInt(hue[1]);
-    hue[0]=parseInt(hue[0]);
-    if (hue[1] < 3){
-      hue[1]=0;
-    } else if (hue[1] >= 3 && hue[1] < 7){
-      hue[1]=5;
-    } else if (hue[1]<=7){
-      hue[1]=0;
-      hue[0]= hue[0]+1;
+    if (hsb[0]!=0){
+      hsb[0] = Math.round(hsb[0]*100);
+      hue = hsb[0].toString().split('');
+      var last = hue.length-1;
+      hue[last]=parseInt(hue[last]);
+      if (hue[last] < 3){
+        hue[last]=0;
+      } else if (hue[last] >= 3 && hue[last] < 7){
+        hue[last]=5;
+      } 
+      if (hue.length == 2){
+        hue[0]=parseInt(hue[0]);
+        if (hue[last]>=7){
+          hue[last]=0;
+          hue[0]= hue[0]+1;
+        }
+
+      hsb[0] = (hue[0]*10)+hue[1];
+      }else{
+        hsb[0]=hue[last];
+      }
     }
-    hsb[0] = (hue[0]*10)+hue[1];
     for (var i = hsb.length - 1; i >= 1; i--) {
       if(hsb[i] <= 0.25) {
         hsb[i] = 0;
