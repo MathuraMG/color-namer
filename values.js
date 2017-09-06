@@ -8,344 +8,386 @@ var color_lookup =
     "name" : "red"
   },
   {
-    "h" : 0.05,
+    "h" : 05,
     "s" : 1,
     "b" :1,
     "name" : "crimson"
   },
   {
-    "h" : 0.1,
+    "h" : 10,
     "s" : 1,
     "b" :1,
     "name" : "orange"
   },
   {
-    "h" : 0.15,
+    "h" : 15,
     "s" : 1,
     "b" :1,
     "name" : "yellow"
   },
   {
-    "h" : 0.2,
+    "h" : 20,
     "s" : 1,
     "b" :1,
     "name" : "yellow green"
   },
   {
-    "h" : 0.25,
+    "h" : 25,
     "s" : 1,
     "b" :1,
     "name" : "green"
   },
   {
-    "h" : 0.3,
+    "h" : 30,
     "s" : 1,
     "b" :1,
     "name" : "green"
   },
   {
-    "h" : 0.35,
+    "h" : 35,
     "s" : 1,
     "b" :1,
     "name" : "green"
   },
   {
-    "h" : 0.4,
+    "h" : 40,
     "s" : 1,
     "b" :1,
     "name" : "green"
   },
   {
-    "h" : 0.45,
+    "h" : 45,
     "s" : 1,
     "b" :1,
     "name" : "turquoise"
   },
   {
-    "h" : 0.5,
+    "h" : 50,
     "s" : 1,
     "b" :1,
     "name" : "cyan"
   },
   {
-    "h" : 0.55,
+    "h" : 55,
     "s" : 1,
     "b" :1,
     "name" : "sky blue"
   },
   {
-    "h" : 0.6,
+    "h" : 60,
     "s" : 1,
     "b" :1,
     "name" : "blue"
   },
   {
-    "h" : 0.65,
+    "h" : 65,
     "s" : 1,
     "b" :1,
     "name" : "blue"
   },
   {
-    "h" : 0.7,
+    "h" : 70,
     "s" : 1,
     "b" :1,
     "name" : "blue"
   },
   {
-    "h" : 0.75,
+    "h" : 75,
     "s" : 1,
     "b" :1,
     "name" : "purple"
   },
   {
-    "h" : 0.8,
+    "h" : 80,
     "s" : 1,
     "b" :1,
     "name" : "purple"
   },
   {
-    "h" : 0.85,
+    "h" : 85,
     "s" : 1,
     "b" :1,
     "name" : "fuchsia"
   },
   {
-    "h" : 0.9,
+    "h" : 83,
     "s" : 1,
     "b" :1,
     "name" : "magenta"
+  },
+  {
+    "h" : 95,
+    "s" : 0,
+    "b" :1,
+    "name" : "pink"
+  },
+  {
+    "h" : 0,
+    "s" : 0,
+    "b" :1,
+    "name" : "white"
   },
 
   //s=1 b=0.5
   {
     "h" : 0,
-    "s" : 1,
+    "s" : 0.5,
     "b" :1,
     "name" : "salmon pink"
   },
   {
-    "h" : 0.05,
-    "s" : 1,
+    "h" : 5,
+    "s" : 0.5,
     "b" :1,
     "name" : "peach"
   },
   {
-    "h" : 0.1,
-    "s" : 1,
+    "h" : 10,
+    "s" : 0.5,
     "b" :1,
     "name" : "light orange"
   },
   {
-    "h" : 0.15,
-    "s" : 1,
+    "h" : 15,
+    "s" : 0.5,
     "b" :1,
     "name" : "light yellow"
   },
   {
-    "h" : 0.2,
-    "s" : 1,
+    "h" : 20,
+    "s" : 0.5,
     "b" :1,
     "name" : "light yellow green"
   },
   {
-    "h" : 0.25,
-    "s" : 1,
+    "h" : 25,
+    "s" : 0.5,
     "b" :1,
     "name" : "light green"
   },
   {
-    "h" : 0.3,
-    "s" : 1,
+    "h" : 30,
+    "s" : 0.5,
     "b" :1,
     "name" : "light green"
   },
   {
-    "h" : 0.35,
-    "s" : 1,
+    "h" : 35,
+    "s" : 0.5,
     "b" :1,
     "name" : "light green"
   },
   {
-    "h" : 0.4,
-    "s" : 1,
+    "h" : 40,
+    "s" : 0.5,
     "b" :1,
     "name" : "light green"
   },
   {
-    "h" : 0.45,
-    "s" : 1,
+    "h" : 45,
+    "s" : 0.5,
     "b" :1,
     "name" : "light turquoise"
   },
   {
-    "h" : 0.5,
-    "s" : 1,
+    "h" : 50,
+    "s" : 0.5,
     "b" :1,
     "name" : "light cyan"
   },
   {
-    "h" : 0.55,
-    "s" : 1,
+    "h" : 55,
+    "s" : 0.5,
     "b" :1,
     "name" : "light sky blue"
   },
   {
-    "h" : 0.6,
-    "s" : 1,
+    "h" : 60,
+    "s" : 0.5,
     "b" :1,
     "name" : "light blue"
   },
   {
-    "h" : 0.65,
-    "s" : 1,
+    "h" : 65,
+    "s" : 0.5,
     "b" :1,
     "name" : "light purple"
   },
   {
-    "h" : 0.7,
-    "s" : 1,
+    "h" : 70,
+    "s" : 0.5,
     "b" :1,
     "name" : "lavendar blue"
   },
   {
-    "h" : 0.75,
-    "s" : 1,
+    "h" : 75,
+    "s" : 0.5,
     "b" :1,
     "name" : "lavendar"
   },
   {
-    "h" : 0.8,
-    "s" : 1,
+    "h" : 80,
+    "s" : 0.5,
     "b" :1,
     "name" : "pinkish purple"
   },
   {
-    "h" : 0.85,
-    "s" : 1,
+    "h" : 85,
+    "s" : 0.5,
     "b" :1,
     "name" : "light fuchsia"
   },
   {
-    "h" : 0.9,
-    "s" : 1,
+    "h" : 90,
+    "s" : 0.5,
     "b" :1,
     "name" : "light magenta"
+  },
+  {
+    "h" : 95,
+    "s" : 0.5,
+    "b" :1,
+    "name" : "light pink"
+  },
+  {
+    "h" : 0,
+    "s" : 0,
+    "b" :0.5,
+    "name" : "gray"
   },
 
   //s=0.5 b=1
   {
     "h" : 0,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark red"
   },
   {
-    "h" : 0.05,
+    "h" : 5,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "brick red"
   },
   {
-    "h" : 0.1,
+    "h" : 1,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "brown"
   },
   {
-    "h" : 0.15,
+    "h" : 15,
     "s" : 1,
     "b" :1,
     "name" : "dark brown"
   },
   {
-    "h" : 0.2,
+    "h" : 15, 
     "s" : 1,
-    "b" :1,
+    "b" : 0.5,
+    "name" : "olive green"
+  },
+  {
+    "h" : 2,
+    "s" : 1,
+    "b" :0.5,
     "name" : "dark yellow green"
   },
   {
-    "h" : 0.25,
+    "h" : 25,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark green"
   },
   {
-    "h" : 0.3,
+    "h" : 3,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark green"
   },
   {
-    "h" : 0.35,
+    "h" : 35,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark green"
   },
   {
-    "h" : 0.4,
+    "h" : 4,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark green"
   },
   {
-    "h" : 0.45,
+    "h" : 45,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark turquoise"
   },
   {
-    "h" : 0.5,
+    "h" : 50,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark cyan"
   },
   {
-    "h" : 0.55,
+    "h" : 55,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark blue"
   },
   {
-    "h" : 0.6,
+    "h" : 60,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "navy blue"
   },
   {
-    "h" : 0.65,
+    "h" : 65,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark navy blue"
   },
   {
-    "h" : 0.7,
+    "h" : 70,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark navy blue"
   },
   {
-    "h" : 0.75,
+    "h" : 75,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark purple"
   },
   {
-    "h" : 0.8,
+    "h" : 80,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark purple"
   },
   {
-    "h" : 0.85,
+    "h" : 85,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark fuchsia"
   },
   {
-    "h" : 0.9,
+    "h" : 83,
     "s" : 1,
-    "b" :1,
+    "b" :0.5,
     "name" : "dark magenta"
+  },
+  {
+    "h" : 90,
+    "s" : 0.5,
+    "b" :1,
+    "name" : "hot pink"
+  },
+  {
+    "h" : 0,
+    "s" : 0,
+    "b" :0,
+    "name" : "black"
   },
 
 ]

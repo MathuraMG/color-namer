@@ -6,33 +6,51 @@ function calculateColor() {
   var color = $(".input-color")[0].value;
   var regEx = /[0-9A-Fa-f]{6}/g;
   if(regEx.test(color) && color.length == 6 ) {
-    //fill the colour in the div
+    //fill the color in the div
     var color = $(".input-color")[0].value;
     $(".input-color-box").css("background","#"+color);
     var r = parseInt(color[0]+color[1],16);
     var g = parseInt(color[2]+color[3],16);
     var b = parseInt(color[4]+color[5],16);
-    var color_hsb = rgbToHsv(r,g,b);
-    console.log(color_hsb);
-    var h_rounded = Math.round(color_hsb[0]*10)/10;
-    var s_rounded = color_hsb[1];
-    if(s_rounded <= 0.5) {
-      s_rounded = 0.5;
+    var hsb = rgbToHsv(r,g,b);
+    console.log(hsb);
+    if (hsb[0]!=0){
+      hsb[0] = Math.round(hsb[0]*100);
+      hue = hsb[0].toString().split('');
+      var last = hue.length-1;
+      hue[last]=parseInt(hue[last]);
+      if (hue[last] < 3){
+        hue[last]=0;
+      } else if (hue[last] >= 3 && hue[last] < 7){
+        hue[last]=5;
+      } 
+      if (hue.length == 2){
+        hue[0]=parseInt(hue[0]);
+        if (hue[last]>=7){
+          hue[last]=0;
+          hue[0]= hue[0]+1;
+        }
+
+      hsb[0] = (hue[0]*10)+hue[1];
+      }else{
+        hsb[0]=hue[last];
+      }
     }
-    else {
-      s_rounded = 1;
+    for (var i = hsb.length - 1; i >= 1; i--) {
+      if(hsb[i] <= 0.25) {
+        hsb[i] = 0;
+      } else if(hsb[i] > 0.25 &&  hsb[i] < 0.75){
+        hsb[i] = 0.5;
+      }
+      else {
+        hsb[i] = 1;
+      }
     }
-    var b_rounded = color_hsb[2];
-    if(b_rounded <= 0.5) {
-      b_rounded = 0.5;
-    }
-    else {
-      b_rounded = 1;
-    }
-    console.log(h_rounded,s_rounded,b_rounded);
+    console.log(hsb);
     for(var i =0;i<color_lookup.length;i++) {
-      if((color_lookup[i]["h"] == h_rounded) && (color_lookup[i]["s"] == s_rounded) && (color_lookup[i]["b"] == b_rounded) ) {
+      if((color_lookup[i]["h"] == hsb[0]) && (color_lookup[i]["s"] == hsb[1]) && (color_lookup[i]["b"] == hsb[2]) ) {
         $(".input-color-name").html(color_lookup[i].name);
+        break;
       }
     }
   } else {
@@ -156,4 +174,5 @@ $(document).ready(function() {
     div.css("background", colors_hsb[i]);
     $(".container-hsb-3").append(div);
   }
+  
 });
