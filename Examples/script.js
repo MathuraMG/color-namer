@@ -1,15 +1,20 @@
 var gap = 64;
-var total = 64; //4*4*4
+var total = 64;
 
 function hexCalculateColor(){
   var color = $(".hexinput-color")[0].value;
+  $(".input-color-box").css("background","#"+color);
+  var colorName = hexColorName(color);
+  $(".input-color-name").html(colorName);
 }
 
 function rgbCalculateColor(){
   var color = $(".rgbinput-color")[0].value;
+  var rgbcolor = color.split(",");
+  $(".input-color-box").css("background", "rgb("+parseInt(rgbcolor[0])+","+parseInt(rgbcolor[1])+","+parseInt(rgbcolor[2])+")");
+  var colorName = rgbColorName(parseInt(rgbcolor[0]),parseInt(rgbcolor[1]),parseInt(rgbcolor[2]));
+  $(".input-color-name").html(colorName);
 }
-
-
 
 
 ///Create Color Blocks///
