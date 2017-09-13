@@ -1,6 +1,97 @@
+function calculateColor(hsv) {
+	var colortext;
+    console.log(hsv);
+    if (hsv[0]!=0){
+      hsv[0] = Math.round(hsv[0]*100);
+      hue = hsv[0].toString().split('');
+      var last = hue.length-1;
+      hue[last]=parseInt(hue[last]);
+      if (hue[last] < 3){
+        hue[last]=0;
+      } else if (hue[last] >= 3 && hue[last] < 7){
+        hue[last]=5;
+      } 
+      if (hue.length == 2){
+        hue[0]=parseInt(hue[0]);
+        if (hue[last]>=7){
+          hue[last]=0;
+          hue[0]= hue[0]+1;
+        }
+      hsv[0] = (hue[0]*10)+hue[1];
+      }else{
+        hsv[0]=hue[last];
+      }
+    }
+    for (var i = hsv.length - 1; i >= 1; i--) {
+      if(hsv[i] <= 0.25) {
+        hsv[i] = 0;
+      } else if(hsv[i] > 0.25 &&  hsv[i] < 0.75){
+        hsv[i] = 0.5;
+      }
+      else {
+        hsv[i] = 1;
+      }
+    }
+    console.log(hsv);
+    for(var i =0;i<color_lookup.length;i++) {
+      if((color_lookup[i]["h"] == hsv[0]) && (color_lookup[i]["s"] == hsv[1]) && (color_lookup[i]["b"] == hsv[2]) ) {
+        colortext = color_lookup[i].name;
+        break;
+      }
+    }
+	return colortext;
+}
+
+function hexToHsv(value){
+ 	var r = parseInt(value[0]+value[1],16);
+   	var g = parseInt(value[2]+value[3],16);
+    var b = parseInt(value[4]+value[5],16);
+    var hsv = rgbToHsv(r,g,b);
+    return hsv;
+}
+
+function rgbToHsv(r, g, b) {
+  r /= 255, g /= 255, b /= 255;
+  var max = Math.max(r, g, b), min = Math.min(r, g, b);
+  var h, s, v = max;
+  var d = max - min;
+  s = max == 0 ? 0 : d / max;
+  if (max == min) {
+    h = 0; // achromatic
+  } else {
+    switch (max) {
+      case r:
+        h = (g - b) / d + (g < b ? 6 : 0);
+        break;
+      case g:
+        h = (b - r) / d + 2;
+        break;
+      case b:
+        h = (r - g) / d + 4;
+        break;
+    }
+    h /= 6;
+  }
+  return[h, s, v];
+}
+
+function rgbColorName(r, g, b){
+	var colorname = calculateColor(rgbToHsv(r,g,b));
+  	return colorname;
+}
+
+function hexColorName(value){
+	var regEx = /[0-9A-Fa-f]{6}/g;
+  	if(regEx.test(value) && value.length == 6 ) {
+  		var colorname = calculateColor(hexToHsv(value));
+  		return colorname;
+  	}else{
+  		return("Enter a hex value");
+  	}
+}
+
 var color_lookup =
 [
-  //s=1 b=1
   {
     "h" : 0,
     "s" : 1,
@@ -389,5 +480,6 @@ var color_lookup =
     "b" :0,
     "name" : "black"
   },
-
 ]
+
+  
