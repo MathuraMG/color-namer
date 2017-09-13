@@ -1,6 +1,5 @@
 function calculateColor(hsv) {
 	var colortext;
-    console.log(hsv);
     if (hsv[0]!=0){
       hsv[0] = Math.round(hsv[0]*100);
       hue = hsv[0].toString().split('');
@@ -32,7 +31,6 @@ function calculateColor(hsv) {
         hsv[i] = 1;
       }
     }
-    console.log(hsv);
     for(var i =0;i<color_lookup.length;i++) {
       if((color_lookup[i]["h"] == hsv[0]) && (color_lookup[i]["s"] == hsv[1]) && (color_lookup[i]["b"] == hsv[2]) ) {
         colortext = color_lookup[i].name;
@@ -43,11 +41,11 @@ function calculateColor(hsv) {
 }
 
 function hexToHsv(value){
- 	var r = parseInt(value[0]+value[1],16);
-   	var g = parseInt(value[2]+value[3],16);
-    var b = parseInt(value[4]+value[5],16);
-    var hsv = rgbToHsv(r,g,b);
-    return hsv;
+  var r = parseInt(value[0]+value[1],16);
+  var g = parseInt(value[2]+value[3],16);
+  var b = parseInt(value[4]+value[5],16);
+  var hsv = rgbToHsv(r,g,b);
+  return hsv;
 }
 
 function rgbToHsv(r, g, b) {
@@ -77,7 +75,7 @@ function rgbToHsv(r, g, b) {
 
 function rgbColorName(r, g, b){
 	var colorname = calculateColor(rgbToHsv(r,g,b));
-  	return colorname;
+  return colorname;
 }
 
 function hexColorName(value){
