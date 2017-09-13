@@ -7,7 +7,7 @@ A simple js library that gives back the color-name of a hex or rgb value
   Use the following functions to get a color name: 
   ### hexColorName(hexvalue)
   hexColorName(ff0000) returns "Red"
-  the expected input is a string of six characters without "#" at the beginning
+  <br />the expected input is a string of six characters without "#" at the beginning
   ### rgbColorName(r,g,b)
   rgbColorName(0,0,255) returns "Blue"
-  the expected input is three ints
+  <br />the expected input is three ints
