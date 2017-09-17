@@ -1,24 +1,28 @@
 function calculateColor(hsv) {
-	var colortext;
+  var colortext;
     if (hsv[0]!=0){
       hsv[0] = Math.round(hsv[0]*100);
       hue = hsv[0].toString().split('');
       var last = hue.length-1;
       hue[last]=parseInt(hue[last]);
-      if (hue[last] < 3){
+      if (hue[last] < 2.5){
         hue[last]=0;
-      } else if (hue[last] >= 3 && hue[last] < 7){
+      } else if (hue[last] >= 2.5 && hue[last] < 7.5){
         hue[last]=5;
       } 
       if (hue.length == 2){
         hue[0]=parseInt(hue[0]);
-        if (hue[last]>=7){
+        if (hue[last]>=7.5){
           hue[last]=0;
           hue[0]= hue[0]+1;
         }
       hsv[0] = (hue[0]*10)+hue[1];
       }else{
-        hsv[0]=hue[last];
+        if (hue[last]>=7.5){
+          hsv[0]=10;
+        }else{
+          hsv[0]=hue[last];
+        }
       }
     }
     for (var i = hsv.length - 1; i >= 1; i--) {
@@ -37,7 +41,7 @@ function calculateColor(hsv) {
         break;
       }
     }
-	return colortext;
+  return colortext;
 }
 
 function hexToHsv(value){
@@ -74,18 +78,18 @@ function rgbToHsv(r, g, b) {
 }
 
 function rgbColorName(r, g, b){
-	var colorname = calculateColor(rgbToHsv(r,g,b));
+  var colorname = calculateColor(rgbToHsv(r,g,b));
   return colorname;
 }
 
 function hexColorName(value){
-	var regEx = /[0-9A-Fa-f]{6}/g;
-  	if(regEx.test(value) && value.length == 6 ) {
-  		var colorname = calculateColor(hexToHsv(value));
-  		return colorname;
-  	}else{
-  		return("Enter a hex value");
-  	}
+  var regEx = /[0-9A-Fa-f]{6}/g;
+    if(regEx.test(value) && value.length == 6 ) {
+      var colorname = calculateColor(hexToHsv(value));
+      return colorname;
+    }else{
+      return("Enter a hex value");
+    }
 }
 
 var color_lookup =
@@ -169,6 +173,12 @@ var color_lookup =
     "name" : "blue"
   },
   {
+    "h" : 60,
+    "s" : 0.5,
+    "b" :0.5,
+    "name" : "blue"
+  },
+  {
     "h" : 65,
     "s" : 1,
     "b" :1,
@@ -199,7 +209,13 @@ var color_lookup =
     "name" : "fuchsia"
   },
   {
-    "h" : 83,
+    "h" : 90,
+    "s" : 1,
+    "b" :1,
+    "name" : "fuchsia"
+  },
+  {
+    "h" : 95,
     "s" : 1,
     "b" :1,
     "name" : "magenta"
@@ -216,8 +232,6 @@ var color_lookup =
     "b" :1,
     "name" : "white"
   },
-
-  //s=1 b=0.5
   {
     "h" : 0,
     "s" : 0.5,
@@ -244,6 +258,12 @@ var color_lookup =
   },
   {
     "h" : 20,
+    "s" : 0,
+    "b" :1,
+    "name" : "very light yellow"
+  },
+  {
+    "h" : 20,
     "s" : 0.5,
     "b" :1,
     "name" : "light yellow green"
@@ -267,6 +287,12 @@ var color_lookup =
     "name" : "light green"
   },
   {
+    "h" : 35,
+    "s" : 0,
+    "b" :1,
+    "name" : "very light green"
+  },
+  {
     "h" : 40,
     "s" : 0.5,
     "b" :1,
@@ -283,6 +309,12 @@ var color_lookup =
     "s" : 0.5,
     "b" :1,
     "name" : "light cyan"
+  },
+  {
+    "h" : 50,
+    "s" : 0,
+    "b" :1,
+    "name" : "light sky blue"
   },
   {
     "h" : 55,
@@ -303,6 +335,12 @@ var color_lookup =
     "name" : "light purple"
   },
   {
+    "h" : 85,
+    "s" : 0.5,
+    "b" :0.5,
+    "name" : "purple"
+  },
+  {
     "h" : 70,
     "s" : 0.5,
     "b" :1,
@@ -311,6 +349,12 @@ var color_lookup =
   {
     "h" : 75,
     "s" : 0.5,
+    "b" :1,
+    "name" : "lavendar"
+  },
+  {
+    "h" : 70,
+    "s" : 0,
     "b" :1,
     "name" : "lavendar"
   },
@@ -339,13 +383,17 @@ var color_lookup =
     "name" : "light pink"
   },
   {
+    "h" : 85,
+    "s" : 0,
+    "b" :1,
+    "name" : "light pink"
+  },
+  {
     "h" : 0,
     "s" : 0,
     "b" :0.5,
     "name" : "gray"
   },
-
-  //s=0.5 b=1
   {
     "h" : 0,
     "s" : 1,
@@ -359,8 +407,14 @@ var color_lookup =
     "name" : "brick red"
   },
   {
-    "h" : 1,
+    "h" : 10,
     "s" : 1,
+    "b" :0.5,
+    "name" : "brown"
+  },
+  {
+    "h" : 10,
+    "s" : 0.5,
     "b" :0.5,
     "name" : "brown"
   },
@@ -377,7 +431,31 @@ var color_lookup =
     "name" : "olive green"
   },
   {
-    "h" : 2,
+    "h" : 15, 
+    "s" : 0.5,
+    "b" : 0.5,
+    "name" : "olive green"
+  },
+  {
+    "h" : 15, 
+    "s" : 1,
+    "b" : 0,
+    "name" : "dark olive green"
+  },
+  {
+    "h" : 20, 
+    "s" : 0.5,
+    "b" : 0.5,
+    "name" : "olive green"
+  },
+  {
+    "h" : 20, 
+    "s" : 1,
+    "b" : 0,
+    "name" : "dark olive green"
+  },
+  {
+    "h" : 20,
     "s" : 1,
     "b" :0.5,
     "name" : "dark yellow green"
@@ -389,7 +467,13 @@ var color_lookup =
     "name" : "dark green"
   },
   {
-    "h" : 3,
+    "h" : 35,
+    "s" : 0.5,
+    "b" :0.5,
+    "name" : "dark green"
+  },
+  {
+    "h" : 30,
     "s" : 1,
     "b" :0.5,
     "name" : "dark green"
@@ -401,10 +485,16 @@ var color_lookup =
     "name" : "dark green"
   },
   {
-    "h" : 4,
+    "h" : 40,
     "s" : 1,
     "b" :0.5,
     "name" : "dark green"
+  },
+  {
+    "h" : 35,
+    "s" : 1,
+    "b" :0,
+    "name" : "very dark green"
   },
   {
     "h" : 45,
@@ -413,8 +503,20 @@ var color_lookup =
     "name" : "dark turquoise"
   },
   {
+    "h" : 40,
+    "s" : 0.5,
+    "b" :0.5,
+    "name" : "dark green"
+  },
+  {
     "h" : 50,
     "s" : 1,
+    "b" :0.5,
+    "name" : "dark cyan"
+  },
+  {
+    "h" : 50,
+    "s" : 0.5,
     "b" :0.5,
     "name" : "dark cyan"
   },
@@ -428,6 +530,18 @@ var color_lookup =
     "h" : 60,
     "s" : 1,
     "b" :0.5,
+    "name" : "navy blue"
+  },
+  {
+    "h" : 65,
+    "s" : 0.5,
+    "b" :0.5,
+    "name" : "navy blue"
+  },
+  {
+    "h" : 70,
+    "s" : 0.5,
+    "b" : 0.5,
     "name" : "navy blue"
   },
   {
@@ -461,7 +575,25 @@ var color_lookup =
     "name" : "dark fuchsia"
   },
   {
-    "h" : 83,
+    "h" : 90,
+    "s" : 0.5,
+    "b" :0.5,
+    "name" : "dark fuchsia"
+  },
+  {
+    "h" : 90,
+    "s" : 1,
+    "b" :1,
+    "name" : "dark fuchsia"
+  },
+  {
+    "h" : 90,
+    "s" : 1,
+    "b" :0.5,
+    "name" : "dark fuchsia"
+  },
+  {
+    "h" : 95,
     "s" : 1,
     "b" :0.5,
     "name" : "dark magenta"
@@ -479,5 +611,3 @@ var color_lookup =
     "name" : "black"
   },
 ]
-
-  
