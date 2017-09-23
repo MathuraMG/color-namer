@@ -2,7 +2,7 @@
 A simple js library that gives back the color-name of a hex or rgb value
 
 ## How to use?
-  Link your to the library https://cdn.rawgit.com/lm-n/colour-namer/db2b5b2f/colorNamer.js
+  Link your html to the library https://cdn.rawgit.com/lm-n/colour-namer/662ef43f/colorNamer.js
   
   Use the following functions to get a color name: 
   ### hexColorName(hexvalue)
