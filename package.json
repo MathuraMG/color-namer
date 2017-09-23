@@ -13,7 +13,9 @@
     "visually-impaired",
     "visually-challenged"
   ],
-  "author":
+  "contributors": [
+    "MathuraMG"
     "lmhyphenn <luis.morales@nyu.edu> (http://lm-n.com/)",
+  ],
   "license": "ISC"
 }
