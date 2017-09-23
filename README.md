@@ -2,7 +2,7 @@
 A simple npm module/js client library that gives back the color-name of a hex or rgb value
 
 ## NPM 
-	For use with Node.js: `npm install color-namer`
+For use with Node.js: `npm install color-namer`
 
 	var color = require('color-namer');
 	
