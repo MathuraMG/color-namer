@@ -47,16 +47,18 @@ function pad(str, max) {
 $(document).ready(function() {
 
   //create hsb blocks
-  var colors_hsb = [];
+  var colors_names = [], colors_hsb = [];
   for(var i =0;i<0.9;i+=0.05) {
     color_rgb = hsvToRgb(i,1,1);
     color = "#" + pad(Math.round(+color_rgb[0]).toString(16), 2) + pad(Math.round(+color_rgb[1]).toString(16), 2) + pad(Math.round(+color_rgb[2]).toString(16), 2);
+    color_name = rgbColorName(color_rgb[0],color_rgb[1],color_rgb[2]) + ' ' + color;
     colors_hsb.push(color);
+    colors_names.push(color_name);
   }
   for (var i = 0; i < colors_hsb.length; i++) {
     var div = $("<div>");
     div.addClass("color-box-hsb");
-    div.html(colors_hsb[i]);
+    div.html(colors_names[i]);
     div.css("background", colors_hsb[i]);
     $(".container-hsb-1").append(div);
   }
@@ -64,12 +66,14 @@ $(document).ready(function() {
   for(var i =0;i<0.9;i+=0.05) {
     color_rgb = hsvToRgb(i,0.5,1);
     color = "#" + pad(Math.round(+color_rgb[0]).toString(16), 2) + pad(Math.round(+color_rgb[1]).toString(16), 2) + pad(Math.round(+color_rgb[2]).toString(16), 2);
+    color_name = rgbColorName(color_rgb[0],color_rgb[1],color_rgb[2]) + ' ' + color;
     colors_hsb.push(color);
+    colors_names.push(color_name);
   }
   for (var i = colors_hsb.length/2; i < colors_hsb.length; i++) {
     var div = $("<div>");
     div.addClass("color-box-hsb");
-    div.html(colors_hsb[i]);
+    div.html(colors_names[i]);
     div.css("background", colors_hsb[i]);
     $(".container-hsb-2").append(div);
   }
@@ -77,12 +81,14 @@ $(document).ready(function() {
   for(var i =0;i<0.9;i+=0.05) {
     color_rgb = hsvToRgb(i,1,0.5);
     color = "#" + pad(Math.round(+color_rgb[0]).toString(16), 2) + pad(Math.round(+color_rgb[1]).toString(16), 2) + pad(Math.round(+color_rgb[2]).toString(16), 2);
+    color_name = rgbColorName(color_rgb[0],color_rgb[1],color_rgb[2]) + ' ' + color;
     colors_hsb.push(color);
+    colors_names.push(color_name);
   }
   for (var i = colors_hsb.length*2/3; i < colors_hsb.length; i++) {
     var div = $("<div>");
     div.addClass("color-box-hsb");
-    div.html(colors_hsb[i]);
+    div.html(colors_names[i]);
     div.css("background", colors_hsb[i]);
     $(".container-hsb-3").append(div);
   }
