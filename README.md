@@ -4,13 +4,13 @@ A simple npm module/js client library that gives back the color-name of a hex or
 ##NPM 
 	For use with Node.js: `npm install color-namer`
 
-	```js
+	`
 	var color = require('color-namer');
 	
 	color.rgbColorName(255,0,0); //returns red
 	color.hexColorName(ff0000); //returns red
 
-	```
+	`
 
 ##Client library
 
