@@ -78,8 +78,13 @@ function rgbToHsv(r, g, b) {
 }
 
 function rgbColorName(r, g, b){
-  var colorname = calculateColor(rgbToHsv(r,g,b));
-  return colorname;
+  if (0<=r && r<=255 && 0<=g && g<=255 && 0<=b && b<=255){
+    var colorname = calculateColor(rgbToHsv(r,g,b));
+    return colorname;
+  }else{
+    return("Requires a valid rgb value");
+  }
+
 }
 
 function hexColorName(value){
@@ -88,7 +93,7 @@ function hexColorName(value){
       var colorname = calculateColor(hexToHsv(value));
       return colorname;
     }else{
-      return("Enter a hex value");
+      return("Requires a valid hex value");
     }
 }
 
