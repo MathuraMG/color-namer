@@ -1,10 +1,10 @@
-# Color-namer
+# colornamer
 A simple npm module/js client library that gives back the color-name of a hex or rgb value
 
 ## NPM 
-For use with Node.js: `npm install color-namer`
+For use with Node.js: `npm install colornamer`
 
-	var color = require('color-namer');
+	var color = require('colornamer');
 	
 	color.rgbColorName(255,0,0); //returns red
 	color.hexColorName(ff0000); //returns red

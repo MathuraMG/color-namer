@@ -1,5 +1,5 @@
 {
-  "name": "color-namer",
+  "name": "colornamer",
   "version": "1.0.0",
   "description": "A simple package that gives back the color-name of a hex or rgb value",
   "main": "index.js",
