@@ -1,7 +1,7 @@
 # colornamer
 A simple npm module/js client library that gives back the color-name of a hex or rgb value
 
-## NPM 
+## NPM module
 For use with Node.js: `npm install colornamer`
 
 	var color = require('colornamer');
@@ -14,11 +14,10 @@ For use with Node.js: `npm install colornamer`
 ## Client library
 
   Link your html to the library https://cdn.rawgit.com/lm-n/colour-namer/1228bc4d/lib/colorNamer.js
-  
-  Use the following functions to get a color name: 
-  ### hexColorName(hexvalue)
-  hexColorName(ff0000) returns "Red"
-  <br />the expected input is a string of six characters without "#" at the beginning
-  ### rgbColorName(r,g,b)
-  rgbColorName(0,0,255) returns "Blue"
-  <br />the expected input is three ints
+  Use the following functions to get a color name:
+  <br>
+  `rgbColorName(255,0,0); //returns red`
+  the expected input is three ints
+  <br>
+  `hexColorName(ff0000); //returns red`
+  the expected input is a string of six characters without "#" at the beginning
