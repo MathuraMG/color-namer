@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <title>ColorScale</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-    <script src="values.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.rawgit.com/lm-n/colour-namer/1228bc4d/lib/colorNamer.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <!-- <div class="container"></div> -->
-    <input type="text" name="color" class="input-color"></input>
-    <button class="input-submit" onclick="calculateColor()">Submit</button>
+    <div>Hex to Color Name</div>
+    <input type="text" name="color" class="hexinput-color"></input>
+    <button class="input-submit" onclick="hexCalculateColor()">Submit</button>
+    <div>RGB to Color Name (255,255,255)</div>
+    <input type="text" name="color" class="rgbinput-color"></input>
+    <button class="input-submit" onclick="rgbCalculateColor()">Submit</button>
     <div class="input-color-box color-box"></div>
     <p class="input-color-name">NaN</p>
     <div class="container-hsb">

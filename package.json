@@ -1,0 +1,21 @@
+{
+  "name": "colornamer",
+  "version": "1.0.0",
+  "description": "A simple package that gives back the color-name of a hex or rgb value",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "color",
+    "accessible",
+    "accessibility",
+    "visually-impaired",
+    "visually-challenged"
+  ],
+  "contributors": [
+    "MathuraMG",
+    "lmhyphenn <luis.morales@nyu.edu> (http://lm-n.com/)"
+  ],
+  "license": "ISC"
+}
