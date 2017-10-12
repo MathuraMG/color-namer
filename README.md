@@ -9,7 +9,7 @@ For use with Node.js: `npm install colornamer`
 	var color = require('colornamer');
 	
 	color.rgbColorName(255,0,0); //returns red
-	color.hexColorName(ff0000); //returns red
+	color.hexColorName('ff0000'); //returns red
 
 
 
@@ -22,5 +22,5 @@ For use with Node.js: `npm install colornamer`
   `rgbColorName(255,0,0); //returns red`
   the expected input is three ints
   <br>
-  `hexColorName(ff0000); //returns red`
+  `hexColorName('ff0000'); //returns red`
   the expected input is a string of six characters without "#" at the beginning
