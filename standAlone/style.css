@@ -1,0 +1,35 @@
+.color-box {
+  height: 50px;
+  width: 24%;
+  /*background: #000;*/
+  border: 1px solid #fff;
+  padding: 2px;
+
+}
+
+.color-box-hsb {
+  height: 50px;
+  width: 100%;
+  /*background: #000;*/
+  border: 1px solid #fff;
+  padding: 2px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-hsb {
+  display: flex;
+}
+
+.container-hsb-part {
+  width: 30%;
+}
+
+.input-color-box {
+  background: #000;
+}

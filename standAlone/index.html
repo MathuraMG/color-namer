@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ColorScale</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.rawgit.com/lm-n/colour-namer/1228bc4d/lib/colorNamer.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>RGB color generator</h1>
+    <span>Enter RGB values to convert. For example: 255, 255, 255 will produce white</span><br><br>
+    <label id="rgb" for="value">RGB values</label>
+    <input id="value"type="text" name="color" class="rgbinput-color" aria-labelledby="rgb value"/>
+    <button type="submit" name="submit" value="Submit Value" class="input-submit"onclick="rgbCalculateColor()" >Submit Value</button>
+    <p aria-live="assertive" class="input-color-name">NaN</p>
+    <div class="input-color-box color-box"></div>
+  </body>
+</html>
