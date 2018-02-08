@@ -15,7 +15,7 @@ For use with Node.js: `npm install colornamer`
 
 ## Client library
 
-  Link your html to the library: https://cdn.rawgit.com/lm-n/colour-namer/1228bc4d/lib/colorNamer.js
+  Link your html to the library: https://cdn.rawgit.com/lm-n/color-namer/master/lib/colorNamer.js
   <br>
   Use the following functions to get a color name:
   <br>
