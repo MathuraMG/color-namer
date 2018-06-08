@@ -1,7 +1,7 @@
 # colornamer
 A simple npm module/js client library that gives back the color-name of a hex or rgb value. 
 
-Created to provide accessible color names to people that are blind and visually impaired as part of the p5 accessible canvas project (https://github.com/processing/p5.accessibility) for the p5.js web editor (https://github.com/processing/p5.js-web-editor).
+Created to provide accessible color names to people who are blind and visually impaired as part of the p5 accessible canvas project (https://github.com/processing/p5.accessibility) for the p5.js web editor (https://github.com/processing/p5.js-web-editor).
 
 ## NPM module
 For use with Node.js: `npm install colornamer`
